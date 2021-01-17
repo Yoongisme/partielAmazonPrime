@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Prime Video</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .AmazonPrime {
+            background-color: black !important;
+        }
+
+        .Dropdwn {
+            background-color: black !important;
+        }
+
+        .formulaire {
+            background-color: black;
+        }
+
+        @keyframes modificationCouleur {
+            0% {
+                background-color: #000000;
+            }
+
+            20% {
+                background-color: #0d335d;
+            }
+
+            40% {
+                background-color: #30475e;
+            }
+
+            60% {
+                background-color: #222831;
+            }
+
+            80% {
+                background-color: #682c0e;
+            }
+
+            100% {
+                background-color: #393e46;
+            }
+        }
+
+        @keyframes modificationCouleur2 {
+            100% {
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+
+<body id="body">
+    <nav class="navbar navbar-inverse navbar-fixed-top AmazonPrime">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://www.primevideo.com/ref=atv_nb_sf_hm" target="_bnk">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg"
+                        alt="Logo" style="width:100px;" onmouseover="evenementCapture2(this)"></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="https://www.primevideo.com/ref=atv_nb_sf_hm" target="_blank">Accueil</a>
+                </li>
+                <li><a href="https://www.primevideo.com/storefront/ref=nav_shopall_aiv_vid?merchId=RentBuy&ie=UTF8"
+                        target="_blank">Boutique</a></li>
+                <li><a href="https://www.primevideo.com/storefront/channels/ref=atv_nb_sf_ch"
+                        target="_blank">Chaînes</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle text" data-toggle="dropdown" href="#">Catégories
+                        <span class="caret text"></span></a>
+                    <ul class="dropdown-menu Dropdwn">
+                        <li><a href="https://www.primevideo.com/storefront/tv/ref=atv_tc_tv" target="_blank">Séries</a>
+                        </li>
+                        <li><a href="https://www.primevideo.com/storefront/movie/ref=atv_tc_m" target="_blank">Films</a>
+                        </li>
+                        <li><a href="https://www.primevideo.com/storefront/kids/ref=atv_tc_kids"
+                                target="_blank">Enfants</a></li>
+                        <li><a href="https://www.primevideo.com/storefront/ref=atv_tc_prime?filterId=OFFER_FILTER%3DPRIME"
+                                target="_blank">Inclus sur amazon Prime</a></li>
+                        <li><a href="https://www.primevideo.com/storefront/ref=atv_tc_originals?merchId=Originals"
+                                target="_blank">Programmes Amazon Original</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <!-- FORMULAIRE D'INSCRIPTION -->
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+                    Essayez gratuitement!
+                  </button>
+                
+                  <!-- The Modal -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                      
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                          <h4 class="modal-title">Renseignez vos informations.</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                          <div class="container">
+                        <form action="/action_page.php" class="was-validated">
+                            <div class="form-group">
+                                <label for="Votre nom"></label>
+                                <input type="text" placeholder="Votre nom" name="entry.749710659">
+                            </div>
+                            <div class="form-group">
+                                <label for="Votre prénom"></label>
+                                <input type="text" placeholder="Votre prénom" name="entry.1319312157">
+                            </div>
+                            <div class="form-group">
+                                <label for="Votre adresse-mail"></label>
+                                <input type="text" placeholder="Votre adresse-mail" name="entry.1561795688">
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="remember"> Séries<br>
+                                    <input class="form-check-input" type="radio" name="remember"> Films et Enfants<br>
+                                    <input class="form-check-input" type="radio" name="remember"> Programmes Amazon Original<br>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </form>
+                    </div>
+                        </div>
+                        
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+            </ul>
+        </div>
+    </nav>
+    <br><br><br>
+
+    <!-- Carrousel -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img
+                    src="https://m.media-amazon.com/images/G/01/digital/video/sonata/ROW_FR_TVOD_Hero_Elcano_Multi_Title_Store_Aug_V2/25c1a075-6b57-4dae-b251-54958e918e5f._UR3000,600_SX3000_FMwebp_.jpghttps://m.media-amazon.com/images/G/01/digital/video/sonata/ROW_FR_TVOD_Hero_Elcano_Multi_Title_Store_Aug_V2/25c1a075-6b57-4dae-b251-54958e918e5f._UR3000,600_SX3000_FMwebp_.jpg">
+            </div>
+
+            <div class="item">
+                <img
+                    src="https://m.media-amazon.com/images/S/sonata-images-prod/FR_TVOD_SH_Tenet_VOD/4050d17f-a468-40f2-b220-76d1a3bfacfa._UR3000,600_SX3000_FMwebp_.jpg">
+            </div>
+
+            <div class="item">
+                <img
+                    src="https://m.media-amazon.com/images/G/01/digital/video/sonata/3P_ROWEU_Superhero_STARZPLAY_Hitch/9742da94-5b13-4357-88de-36b386f7c53f._UR3000,600_SX3000_FMwebp_.jpg">
+            </div>
+
+            <div class="item">
+                <img
+                    src="https://m.media-amazon.com/images/G/01/digital/video/sonata/TVOD_FR_Hero_Joker_VOD/4d1514c5-f0af-4b0c-b4e2-6bbe6737da21._UR3000,600_SX3000_FMwebp_.jpg">
+            </div>
+
+            <div class="item">
+                <img
+                    src="https://m.media-amazon.com/images/S/sonata-images-prod/TVOD_FR_Hero_Greenland_VOD/baf005ba-eee4-4f86-bf8d-9d64a6336390._UR3000,600_SX3000_FMwebp_.jpg">
+            </div>
+
+            <div class="item">
+                <img
+                    src="https://m.media-amazon.com/images/G/01/digital/video/sonata/FR_TVOD_SH_SonicTH_VOD/2275ae80-1768-4c2a-8140-1c8bcfbaa8e5._UR3000,600_SX3000_FMwebp_.jpg">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <br>
+
+    <!-- Films -->
+    <div class="container">
+        <div class="row">
+            <h5 style="color: white;"><strong>ACHETER OU LOUER</strong> Films populaires <a
+                    href="https://www.primevideo.com/search/ref=atv_me_ren_c_pxrn7h_2_smr?queryToken=eyJ0eXBlIjoicXVlcnkiLCJuYXYiOnRydWUsInBpIjoiZGVmYXVsdCIsInNlYyI6ImNlbnRlciIsInN0eXBlIjoic2VhcmNoIiwicXJ5IjoicF9uX2VudGl0eV90eXBlPU1vdmllJmluZGV4PWV1LWFtYXpvbi12aWRlby1ldXJvJmFkdWx0LXByb2R1Y3Q9MCZicT1zb3J0OidmZWF0dXJlZC1yYW5rJyZhdl9ieV90eXBlX2luX3RlcnJpdG9yeT1GUjpyZW50YWx8RlI6cHVyY2hhc2U6YXZhaWxhYmxlJnNlYXJjaC1hbGlhcz1pbnN0YW50LXZpZGVvJnFzLWF2X3JlcXVlc3RfdHlwZT00JnFzLWlzLXByaW1lLWN1c3RvbWVyPTAiLCJydCI6InBYck43SHNtciIsInR4dCI6IkZpbG1zIHBvcHVsYWlyZXMiLCJvZmZzZXQiOjAsIm5wc2kiOjAsIm9yZXEiOiI0ZDQ4NTYzNS03ZjE5LTQ4ZjktYWU2OS0xY2I2MjE5NjU3NDY6MTYxMDcxOTM1MzAwMCIsInN0cmlkIjoiMToxMjBKU08yS1UzMThVTCMjTVpRV0daTFVNVlNFR1lMU041MlhHWkxNIiwib3JlcWsiOiIxMnk4eFR6UWpqUHBkTGFjNW91Tk9VT2MrMXNwSUpJVXpObUZodXBQREhVPSIsIm9yZXFrdiI6MX0%3D&pageId=default&queryPageType=browse&ie=UTF8"
+                    target="_blank">voir plus</a></h5>
+
+            <!-- Images de film: première ligne -->
+            <div class="col-md-3">
+                <img onmouseover="evenementCapture(this)"
+                    src="https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/29a3487ef8b3d4499adffa8e6d6236899b8808487a0082688805e4ff502021f0._UR1920,1080_RI_SX712_FMwebp_.jpg"
+                    width=100%>
+            </div>
+            <div class="col-md-3">
+                <img onmouseover="evenementCapture(this)"
+                    src="https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/9687fe2d9c8043937e7a1956f8f92fdcae1e4d4d16cd1bcfe09533fa247a2ea2._UR1920,1080_RI_SX712_FMwebp_.jpg"
+                    width=100%>
+            </div>
+            <div class="col-md-3">
+                <img onmouseover="evenementCapture(this)"
+                    src="https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/c53965c162c5b067c348928d85a6162ffc42b9689b14fabbdf6d791128162816._UR1920,1080_RI_SX712_FMwebp_.jpg"
+                    width=100%>
+            </div>
+            <div class="col-md-3">
+                <img onmouseover="evenementCapture(this)"
+                    src="https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/4cda9644399a266d3863f7eddfce5474735e7b822b0b78409fe3acc1fe37500b._UR1920,1080_RI_SX712_FMwebp_.jpg"
+                    width=100%><br><br>
+            </div>
+
+            <!-- Images de film: deuxième ligne -->
+            <h5 style="color: white;"><strong>ACHETER OU LOUER</strong> Séléction de films en promotions</h5>
+            <div class="col-md-3">
+                <img onmouseover="evenementCapture(this)"
+                    src="https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/f5ad89c0b9cb74a47a8f0195a177d87d3e035724265b4664a97685748d2c6184._UR1920,1080_RI_SX712_FMwebp_.jpg"
+                    width=100%>
+            </div>
+            <div class="col-md-3">
+                <img onmouseover="evenementCapture(this)"
+                    src="https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/c26a614e597c57f9ed3e52973e9e8dbdcd55589e342a95e0450d79506a70b98f._UR1920,1080_RI_SX712_FMwebp_.jpg"
+                    width=100%>
+            </div>
+            <div class="col-md-3">
+                <img onmouseover="evenementCapture(this)"
+                    src="https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/ecc63b23923b6fc945ef34d7cbe8c6477f6e83e21def44881c44ce437f39e231._UR1920,1080_RI_SX712_FMwebp_.jpg"
+                    width=100%>
+            </div>
+            <div class="col-md-3">
+                <img onmouseover="evenementCapture(this)"
+                    src="https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/b9794350e63c507016cac631036a26684410525f44471cd7f09b4ed607cfb6d9._UR1920,1080_RI_SX712_FMwebp_.jpg"
+                    width=100%><br><br><br>
+            </div>
+
+            <h1 style="color: white;">Inscrivez-vous</h1>
+            <h5 style="color: white;">Profitez au mieux de l'expérience Prime Video avec quelques informations sur vous.
+            </h5>
+
+            <form action="">
+                <div class="form-group formulaire">
+                    <input type="text" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-control" id="tel">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password">
+                </div>
+            </form>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                data-target="#myModal2">Envoyer</button>
+
+            <!-- Modal -->
+            <div id="myModal2" class="modal fade" role="dialog">
+                <div class="modal-dialog formulaire">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                            <h4 class="modal-title">Envoyer</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Bien reçu.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function evenementCapture() {
+        var x = document.getElementById("body");
+        x.style.animation = "modificationCouleur 5s linear forwards";
+    }
+
+    function evenementCapture2() {
+        var x = document.getElementById("body");
+        x.style.animation = "modificationCouleur2";
+    }
+</script>
+
+</html>
